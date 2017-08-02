@@ -1,6 +1,10 @@
 # mouse-pan
 Smooth paning on mouse move
 
+example
+===
+https://codepen.io/jackismissing/pen/prEjpx
+
 usage
 ====
 
@@ -10,7 +14,7 @@ Import
 import MousePan from 'mouse-pan';
 ```
 
-Instanciation
+Instantiation
 ---
 ```
 const mousePan = new MousePan({
