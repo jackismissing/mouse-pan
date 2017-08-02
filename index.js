@@ -1,4 +1,4 @@
-export default class MousePan {
+class MousePan {
     constructor(options) {
         this.resize = this.resize.bind(this);
         this.onMousemove = this.onMousemove.bind(this);
@@ -39,13 +39,13 @@ export default class MousePan {
 
     bindEvents() {
         document.addEventListener('mousemove', this.onMousemove);
+        document.addEventListener('resize', this.resize);
     }
 
     /**
      * Sets the wrapper size based on its taller and wider childrens
      */
     setWrapperSize() {
-        console.log(this.$wrapper.childNodes);
         this.size = [].slice.call(this.$wrapper.childNodes).reduce(this.getMaxSize);
         this.size.offsetX = this.size.w - window.innerWidth;
         this.size.offsetY = this.size.h - window.innerHeight;
@@ -62,6 +62,8 @@ export default class MousePan {
     getMaxSize(a, b) {
         a.w = a.nodeType !== undefined ? a.offsetWidth : a.w;
         a.h = a.nodeType !== undefined ? a.offsetHeight : a.h;
+        a.w = a.w || 0;
+        a.h = a.h || 0;
         const w = b.offsetWidth || 0;
         const h = b.offsetHeight || 0;
         return {
@@ -113,3 +115,8 @@ export default class MousePan {
         return newMin + (val - oldMin) * (newMax - newMin) / (oldMax - oldMin);
     }
 }
+
+new MousePan({
+    el: document.querySelector('.pan-wrapper'),
+    ease: .08
+});
