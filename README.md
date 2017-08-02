@@ -1,6 +1,10 @@
 # mouse-pan
 Smooth paning on mouse move
 
+example
+===
+https://codepen.io/jackismissing/pen/prEjpx
+
 usage
 ====
 
