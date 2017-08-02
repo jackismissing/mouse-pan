@@ -1,0 +1,19 @@
+{
+  "name": "mouse-pan",
+  "version": "1.0.0",
+  "description": "Smooth paning on mouse move",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackismissing/mouse-pan.git"
+  },
+  "author": "Nicolas Garnier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackismissing/mouse-pan/issues"
+  },
+  "homepage": "https://github.com/jackismissing/mouse-pan#readme"
+}
