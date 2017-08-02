@@ -10,7 +10,7 @@ Import
 import MousePan from 'mouse-pan';
 ```
 
-Instanciation
+Instantiation
 ---
 ```
 const mousePan = new MousePan({
